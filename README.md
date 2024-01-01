@@ -24,40 +24,108 @@ Overall, this HTML structure provides a simple and clean layout to showcase a QR
 
 
 
-The provided CSS code complements the HTML structure you've shown earlier. Here's a breakdown of the styles you've applied:
+# Responsive Design Documentation for QR Code Component
 
-1. **Universal Reset (`*`)**:
-   - Removes default margins and paddings.
-   - Uses the box model to ensure elements behave as expected.
-   - Sets the default font to 'Outfit', a Google Font you imported earlier.
+## Introduction
 
-2. **Body Styles**:
-   - Sets the background color of the entire page to a light bluish shade (`hsl(212, 45%, 89%)`).
+This documentation outlines the design and development approach taken to create a responsive QR Code component web page. The primary objective is to ensure optimal user experience across various devices and screen sizes. The responsive design utilizes CSS media queries to adapt the layout and styling based on the viewport width.
 
-3. **Typography**:
-   - **h1 Styles**: 
-     - Sets the font size to `1.3rem`.
-     - Color is a dark shade of blue (`hsl(218, 44%, 22%)`).
-     - Adds a margin on top for spacing.
-   - **p Styles**: 
-     - Sets the font size to `0.938rem`.
-     - Color is a muted blueish-gray (`hsl(220, 15%, 55%)`).
+## Table of Contents
 
-4. **Layout & Container Styles**:
-   - **.main-container**: 
-     - Spans the full viewport width (`100vw`) and 90% of the viewport height (`90vh`).
-     - Centers its child elements both vertically (`align-items: center`) and horizontally (`justify-content: center`).
-   - **.container**: 
-     - Has a white background.
-     - Centered with a width of 22% of its parent.
-     - Rounded corners using `border-radius`.
-     - Provides some padding for spacing inside the container.
+1. [Universal Styles](#universal-styles)
+2. [Typography](#typography)
+3. [Layout and Container Styles](#layout-and-container-styles)
+4. [Responsive Adjustments](#responsive-adjustments)
+5. [Conclusion](#conclusion)
 
-5. **QR Code & Text Block Styles**:
-   - **.qr-code-block & .qr-code**: 
-     - Ensures the QR code image takes the full width and has rounded corners.
-   - **.text-block**: 
-     - Arranges text elements vertically with a spacing (`gap`) between them.
-     - Text alignment is centered (`text-align: center`).
+## Universal Styles
 
-With these styles, you'll achieve a clean and responsive design for the QR code component. The specific colors and dimensions will result in a modern and appealing appearance on both desktop and mobile devices.
+- **Reset Styles**: 
+  - Resets default margins, paddings, and box-sizing for consistent rendering across browsers.
+  - Sets the default font to 'Outfit', a Google Font, to maintain consistent typography.
+
+```css
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+}
+```
+
+## Typography
+
+- **Heading and Paragraph Styles**: 
+  - Defines font sizes, colors, and spacing for the primary headings and paragraphs on the page.
+
+```css
+h1 {
+  font-size: 1.3rem;
+  color: hsl(218, 44%, 22%);
+  margin-top: 1em;
+}
+
+p {
+  font-size: 0.938rem;
+  color: hsl(220, 15%, 55%);
+}
+```
+
+## Layout and Container Styles
+
+- **Main Container**: 
+  - Centers content vertically and horizontally within the viewport.
+
+```css
+.main-container {
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+```
+
+- **Container**: 
+  - Provides styling for the primary content container, including background color, border-radius, and padding.
+
+```css
+.container {
+  background-color: hsl(0, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+  border-radius: 20px;
+  padding: 1em;
+}
+```
+
+## Responsive Adjustments
+
+- **Media Queries**: 
+  - Utilizes CSS media queries to adjust layout and styling for various screen sizes.
+  
+```css
+@media (min-width: 768px) {
+  .container {
+    width: 70%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    width: 50%;
+  }
+}
+```
+
+- **Adjustments**: 
+  - The container width adjusts dynamically based on the viewport width, ensuring a responsive design.
+
+## Conclusion
+
+This documentation provides a comprehensive overview of the design and development strategy employed to create a responsive QR Code component. By utilizing CSS media queries and thoughtful styling, the web page ensures optimal viewing and user experience across desktops, tablets, and mobile devices. Continuous testing and refinement are recommended to maintain consistency and performance across various platforms.
