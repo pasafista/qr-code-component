@@ -21,3 +21,43 @@ The HTML code you provided is a basic structure for a web page that seems to sho
    - At the bottom of the page, there's an attribution section that gives credit to Frontend Mentor for the challenge and allows for adding your name as the coder.
 
 Overall, this HTML structure provides a simple and clean layout to showcase a QR code and some accompanying text. The design and additional styling will be determined by the linked CSS (`style.css`) and any additional styles you might add.
+
+
+
+The provided CSS code complements the HTML structure you've shown earlier. Here's a breakdown of the styles you've applied:
+
+1. **Universal Reset (`*`)**:
+   - Removes default margins and paddings.
+   - Uses the box model to ensure elements behave as expected.
+   - Sets the default font to 'Outfit', a Google Font you imported earlier.
+
+2. **Body Styles**:
+   - Sets the background color of the entire page to a light bluish shade (`hsl(212, 45%, 89%)`).
+
+3. **Typography**:
+   - **h1 Styles**: 
+     - Sets the font size to `1.3rem`.
+     - Color is a dark shade of blue (`hsl(218, 44%, 22%)`).
+     - Adds a margin on top for spacing.
+   - **p Styles**: 
+     - Sets the font size to `0.938rem`.
+     - Color is a muted blueish-gray (`hsl(220, 15%, 55%)`).
+
+4. **Layout & Container Styles**:
+   - **.main-container**: 
+     - Spans the full viewport width (`100vw`) and 90% of the viewport height (`90vh`).
+     - Centers its child elements both vertically (`align-items: center`) and horizontally (`justify-content: center`).
+   - **.container**: 
+     - Has a white background.
+     - Centered with a width of 22% of its parent.
+     - Rounded corners using `border-radius`.
+     - Provides some padding for spacing inside the container.
+
+5. **QR Code & Text Block Styles**:
+   - **.qr-code-block & .qr-code**: 
+     - Ensures the QR code image takes the full width and has rounded corners.
+   - **.text-block**: 
+     - Arranges text elements vertically with a spacing (`gap`) between them.
+     - Text alignment is centered (`text-align: center`).
+
+With these styles, you'll achieve a clean and responsive design for the QR code component. The specific colors and dimensions will result in a modern and appealing appearance on both desktop and mobile devices.
